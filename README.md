@@ -1,7 +1,5 @@
 # Тренировочный проэкт
-1. С помощью команды **git clone <repository_https_url>** скопировать проэкт к себе на компьютер.
-![Как найти repository_https_url]
-(https://imgur.com/a/QnOHGas)
+1. С помощью команды **git clone <repository_https_url>** скопировать проэкт к себе на компьютер. [Как найти repository_https_url](https://i.imgur.com/8NbLEEb.png)
 
 2. Установить пакеты запустив команду: 
 **npm install**.
