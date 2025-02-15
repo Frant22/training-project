@@ -297,7 +297,7 @@ function getTipsRating(amount){
         return 'excellent';
     
     }}
-   
+
     console.log(getTipsRating(2));
 console.log(getTipsRating(15));
 console.log(getTipsRating(30));
@@ -391,28 +391,37 @@ console.log(getLargestExpressionResult(20,4))
 Создай массив countries и в квадратных скобках перечисли 3 страны, которые хочешь посетить.
 Выведи массив на экран с помощью console.log.
 */
+let countries = ["China" , "Germany" , "USA"];
+console.log(countries)
 /*
 ЗАДАНИЕ №17
 Используй свойство length и выведи в консоль количество элементов в массиве distances.
 */
 let distances = [3, 20, 34, 56, 1];
+console.log(distances.length)
 /*
 ЗАДАНИЕ №18
 Мы создали массив flowers, который содержит названия цветов. Выведи в консоль второй элемент этого массива.
 💡 Помни, что индексы элементов начинаются с 0.
 */
 let flowers = ['rose', 'tulip', 'sunflower', 'daisy', 'lily', 'lilac', 'orchid'];
+console.log(flowers[1])
 /*
 ЗАДАНИЕ №19
 Замени второй элемент массива на 'peony' по индексу. Выведи массив на экран с помощью console.log.
 💡 Помни, что индексы элементов начинаются с 0.
 */
 let flowersSecond = ['rose', 'tulip', 'sunflower', 'daisy', 'lily', 'lilac', 'orchid'];
+flowersSecond[1] = "peony";
+console.log(flowersSecond)
 /*
 ЗАДАНИЕ №20
 Используй метод push и добавь в конец массива fruits названия любых двух фруктов. Выведи массив на экран с помощью console.log.
 */
 let fruits = ['apple', 'orange', 'pineapple', 'mango'];
+fruits.push('banana')
+fruits.push('watermelon')
+console.log(fruits)
 // LOOPS
 /*
 ЗАДАНИЕ №21
