@@ -103,7 +103,7 @@ const n = 'Hello';
 const m = 'world';
 
 // Менять код ниже этой строки
-resultString = `${n}`+ `${m}!`;
+resultString = `${n} ${m}!`;
 
 console.log(resultString)
 // BOOLEAN
@@ -256,9 +256,9 @@ if (age < 18) {
     console.log("You can not drive a car");
 } else if (age === 18) {
     console.log('You can drive a car')
+} else { 
+    console.log('You can drive a car')
 }
-
-else { console.log('You can drive a car')}
 
 /*
 ЗАДАНИЕ №13
@@ -283,9 +283,7 @@ getTipsRating(10); // 'poor'
 function getTipsRating(amount){
     if (amount === 0) {
         return 'terrible';
-    }
-
-    else if (amount <= 10) {
+    } else if (amount <= 10) {
         return 'poor';
 // добавь остальные условия и выведи результат на экран с помощью console.log.
 
@@ -295,7 +293,6 @@ function getTipsRating(amount){
         return 'great';
     } else if (amount > 50) {
         return 'excellent';
-    
     }}
 
     console.log(getTipsRating(2));
@@ -379,9 +376,11 @@ function getLargestExpressionResult(a,b) {
     } 
     if (a * b > result){
         result = a * b;
-    } if (a / b > result) {
+    } 
+    if (a / b > result) {
         result = a / b;
-    } return result ;
+    } 
+    return result ;
 } 
 console.log(getLargestExpressionResult(20,4))
 
@@ -447,7 +446,16 @@ getDrinks(6); // 1 + 2 + 3 + 4 + 5 + 6 = 21
 */
 function getDrinks(numberOfGuests) {
     // write code here
-}
+   let sum = 0;
+
+    for (let i = 1; i <= numberOfGuests; i++) {
+        sum += i;
+    } 
+    return sum;
+
+} 
+console.log(getDrinks(6))
+console.log(getDrinks(11))
 /*
 ЗАДАНИЕ №22
 А теперь напишем цикл с шагом 😎
@@ -472,7 +480,15 @@ getDrinksWithStep(18, 10); // 1 + 11 = 12
 */
 function getDrinksWithStep(numberOfGuests, step) {
     // write code here
+    let sum = 0;
+
+    for ( i = 1; i <= numberOfGuests  ; i += step){
+        sum += i;
+    }
+
+    return sum;
 }
+console.log(getDrinksWithStep(10, 3))
 /*
 ЗАДАНИЕ №23
 В Mono bank есть возможность положить деньги на депозит под определённый процент и получить прибыль через некоторое время.
@@ -498,7 +514,13 @@ calculateProfit(12500, 3, 12); // 5322
 */
 function calculateProfit(amount, percent, period) {
     // write code here
-}
+    let total = amount;
+    for(i = 1; i <= period; i++){
+        total += total*percent / 100;
+    }
+    return total - amount;
+
+}console.log(calculateProfit(1000, 5, 1))
 /*
 ЗАДАНИЕ №24
 А теперь допишем условие остановки цикла.
@@ -510,14 +532,27 @@ function calculateProfit(amount, percent, period) {
 шаг цикла.
 */
 function printNumbersWithStop(N) {
+    let result = 0;
+    for( i = 1; i <= N; i++) {
+
+        result += i;
+    } 
+    return result
 }
+const result = (4);
+console.log(printNumbersWithStop(10))
+
 /*
 ЗАДАНИЕ №25
 В этом задании дана функция printNumbers, которая должна выводить в консоль числа от start до end включительно.
 Добавь, пожалуйста, шаг цикла, чтобы исправить это.
 */
 function printNumbersGap (start, end) {
+    for(let i = start; i <= end; i++){
+        console.log(i)
+    }
 }
+console.log(printNumbersGap(1,4))
 /*
 ЗАДАНИЕ №25
 Усложним предыдущее задание.
@@ -530,10 +565,10 @@ function printNumbersGap (start, end) {
 условие остановки цикла 'stop condition' и шаг цикла 'loop step' вместо комментариев.
 */
 function printNumbersWithStep(N, step) {
-    for (/* start value */; /* stop condition */; /*loop step*/) {
+    for (i = 1; i <= N; i += step) {
         console.log(i);
     }
-}
+}printNumbersWithStep(7, 3)
 /*
 ЗАДАНИЕ №25
 В этом задании реализуй функцию printNumbersBackwards, которая принимает положительное число N и выводит в консоль числа от N до 1 включительно.
@@ -548,9 +583,13 @@ function printNumbersWithStep(N, step) {
 */
 function printNumbersBackwards(N) {
     // write code here
+ for (let i = N; i >= 1; i--) {
+        console.log(i);
+    }
 }
+printNumbersBackwards(5)
 // STRING ITERATIONS
-const mainString = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
+let mainString = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
 /*
 ЗАДАНИЕ №26
 Переменная title содержит строку.
@@ -558,6 +597,9 @@ const mainString = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 */
 const title = 'Strings';
 //  Write code here
+for (let i = 0; i < title.length; i++){
+    console.log(title[i])
+}
 /*
 ЗАДАНИЕ №27
 Напиши функцию printFromTo, которая:
@@ -566,7 +608,12 @@ const title = 'Strings';
     Вызови фукцию и выведи результат в консоль, в качестве input используй переменную mainString.
 */
 function printFromTo(input, start, end) {
+    for(let i = start; i <= end; i++){
+        console.log(input[i])
+    }
 }
+printFromTo(mainString, 0, 4);
+
 /*
 ЗАДАНИЕ №28
 Напиши функцию printBackwards, которая:
@@ -575,7 +622,11 @@ function printFromTo(input, start, end) {
 Вызови фукцию и выведи результат в консоль, в качестве input используй переменную mainString.
 */
 function printBackwards(input, start, end) {
+    for(i = end; i >= start; i--){
+        console.log(input[i])
+    }
 }
+printBackwards(mainString, 0, 6)
 /*
 ЗАДАНИЕ №29
 Внутри функции replaceSpaces, которая принимает строку input, добавь цикл for, чтобы заменить каждый пробел в input на -.
@@ -585,19 +636,59 @@ function printBackwards(input, start, end) {
 function replaceSpaces(input) {
     let result = '';
     // Write code here
+    for(i = 0; i < input.length; i++){
+        if (input[i] === ' '){
+            result += '-';
+        } else {
+            result += input[i]
+        }
+    }
     return result;
 }
+console.log(replaceSpaces(mainString))
 /*
 ЗАДАНИЕ №30
 Напиши функцию replaceA, которая принимает строку input, заменяет все буквы a и A на * и возвращает полученную строку.
 Вызови фукцию и выведи результат в консоль, в качестве input используй переменную mainString.
 */
 function replaceA(input) {
-}
+    let result = '';
+    for(let i = 0; i < input.length; i++){
+        if (input[i] === 'a' || input[i] === 'A'){
+            result += '*';
+        }
+        else {
+            result += input[i]
+        }
+    }
+    return result;
+} const fifthMainString = 'Atalanta in Italy';
+console.log(replaceA(fifthMainString))
 /*
 ЗАДАНИЕ №31
 Напиши функцию countMs, которая принимает строку text и возвращает количество букв m (как больших, так и маленьких) в ней.
 Вызови фукцию и выведи результат в консоль, в качестве input используй переменную mainString.
 */
 function countMs(text) {
+let count = 0;
+for(let i = 0; i < text.length; i++){
+    if (text[i].toLowerCase() === 'm') {
+        count++
+    }
 }
+return count;
+} const sixthMainString = 'My motorbike was in museum';
+console.log(countMs(sixthMainString));
+/*
+const newNumbers = [25, 89, 65, 35, 99, 55];
+newNumbers.forEach(number => {
+    console.log(number+2)
+}) 
+let table = newNumbers.includes(99);
+console.log(newNumbers.includes(99))
+const mainString = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua';
+*/
+let reversed = [1, 2, 3, 4, 5, 6];
+console.log(reversed.filter(number => {
+    return number%2 === 0;
+}));

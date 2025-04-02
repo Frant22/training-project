@@ -1,0 +1,40 @@
+.header {
+  height: 60px;
+  border-bottom: 1px solid #F2F2F2;
+  box-shadow: 0px 1px 20px 0px #00000080;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+
+    &__item {
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 3px;
+
+        &-highlighted {
+            color: #C22F2F;
+        }
+    }
+}
+.utilities {
+    display: flex;
+    align-items: center;
+}
+.language-switcher {
+    padding-right: 20px;
+    padding-left: 15px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 16%;
+    text-align: justify;
+
+}
