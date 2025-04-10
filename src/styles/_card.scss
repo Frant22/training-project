@@ -1,0 +1,136 @@
+.card {
+    padding: 16px;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px 0px #0000004D;
+    width: 25%;
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+    &__badge {
+        border-radius: 50px;
+        background: #C22F2F;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        padding: 4px 8px;
+        
+    }
+    &__code {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: #939399;
+
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
+    &__description {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-align: justify;
+        margin-bottom: 12px;
+    }
+    &__rating {
+        display: flex;
+        gap: 2px;
+    }
+    &__prices {
+        margin-top: 12px;
+        
+    }
+    &__price {
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        letter-spacing: 1px;
+
+        &-crossed {
+            color: #939399;
+            text-decoration: line-through;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        &-discount {
+            color: #C22F2F;
+            font-size: 14px;
+        }
+        
+    }
+    &__purchase {
+        background: none;
+        background-image: url('/assets/images/shop/basket.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__float {
+        
+    }
+
+
+    &:nth-of-type(1) {
+        .card__rating {
+            .star:nth-of-type(5) {
+                background-image: url('/assets/images/shop/unfilled-star.png');
+            }
+        }
+    }
+}
+.star {
+    background-image: url('/assets/images/shop/filled-star.png');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.float {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+    cursor: pointer;
+
+    &__button {
+        border: none;
+        background: transparent;
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &-compare {
+            background-image: url('/assets/images/compare.png');
+        }
+
+        &-favourite {
+            background-image: url('/assets/images/favourite.png');
+        }
+    }
+}
