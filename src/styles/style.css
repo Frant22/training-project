@@ -58,6 +58,7 @@ textarea {
   border: 0;
   font-size: 16px;
   line-height: 1;
+  font-family: Montserrat, sans-serif;
 }
 
 * {
@@ -68,6 +69,7 @@ textarea {
   padding: 40px 100px;
   display: flex;
   gap: 28px;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -75,7 +77,8 @@ textarea {
   border: 1px solid #EBEBEB;
   border-radius: 10px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.3019607843);
-  width: 25%;
+  width: calc((100% - 84px) / 4);
+  min-width: 220px;
 }
 .card__header {
   display: flex;
@@ -159,10 +162,11 @@ textarea {
 
 .star {
   background-image: url("/assets/images/shop/filled-star.png");
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 60%;
+  background-position: center;
 }
 
 .float {
@@ -187,6 +191,171 @@ textarea {
 }
 .float__button-favourite {
   background-image: url("/assets/images/favourite.png");
+}
+
+.product {
+  display: flex;
+  width: 100%;
+  padding: 0 1.5rem;
+  flex-direction: column;
+}
+.product__image {
+  width: 50%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.product__description {
+  width: 50%;
+}
+.product__info {
+  display: flex;
+  width: 100%;
+}
+
+.description__rating {
+  display: flex;
+}
+.description__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.description__rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+}
+.description__float {
+  flex-direction: row;
+}
+.description__prices {
+  display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.description__prices-crossed {
+  color: #939399;
+  text-decoration: line-through;
+  font-size: 16px;
+}
+.description__prices-discount {
+  color: #C22F2F;
+}
+.description__economy {
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 42px;
+}
+.description__button {
+  border-radius: 4px;
+  border: 1px solid #00BDF2;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00BDF2;
+  letter-spacing: 1.5px;
+  flex-grow: 1;
+  flex-basis: 0;
+  cursor: pointer;
+}
+.description__button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+.description__button-filled {
+  color: #FFFFFF;
+  background: #00BDF2;
+}
+.description__buttons {
+  display: flex;
+  gap: 16px;
+}
+.description__code {
+  letter-spacing: 1px;
+  color: #939399;
+  font-weight: 600;
+  font-size: 12px;
+}
+.description__presence {
+  font-weight: 600;
+  margin-bottom: 23px;
+}
+
+.comments {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+.comments__title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 54px;
+  width: 100%;
+}
+
+.cell {
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  padding: 24px;
+  width: calc((100% - 46px) / 3);
+}
+.cell__full-name {
+  margin-left: 12px;
+}
+.cell__date {
+  font-size: 12px;
+  color: #939399;
+  margin-left: 12px;
+}
+.cell__information {
+  display: flex;
+}
+.cell__name-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cell__rating {
+  display: flex;
+  align-items: center;
+}
+.cell__text {
+  margin-bottom: 8px;
+}
+.cell__pros {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.cell__cons {
+  font-size: 14px;
+}
+.cell:nth-of-type(1) .cell__rating .star:nth-of-type(5) {
+  background-image: url("/assets/images/shop/half-star.png");
+  width: 25px;
+  height: 25px;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+}
+
+.text-green {
+  color: #0D9839;
 }
 
 /*# sourceMappingURL=style.css.map */

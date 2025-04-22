@@ -1,0 +1,206 @@
+.product {
+    display: flex;
+    width: 100%;
+    padding: 0 1.5rem;
+    flex-direction: column;
+
+    &__image {
+        width: 50%;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+
+    &__description {
+        width: 50%;
+    }
+
+
+    &__info {
+        display: flex;
+        width: 100%;
+    }
+
+}
+
+.description {
+    &__title{
+
+    }
+
+    &__rating {
+        display: flex;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__rate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 42px;
+    }
+
+    &__float {
+        flex-direction: row;
+    }
+    
+    &__prices {
+        display: flex;
+        font-weight: 700;
+        font-size: 20px;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 12px;
+
+        &-crossed {
+            color: #939399;
+            text-decoration: line-through;
+            font-size: 16px;
+            
+        }
+        &-discount {
+            color: #C22F2F;
+        }
+    }
+
+    &__economy {
+        display: flex;
+        font-weight: 600;
+        margin-bottom: 42px;
+    }
+
+    &__button {
+        border-radius: 4px;
+        border: 1px solid #00BDF2;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #00BDF2;
+        letter-spacing: 1.5px;
+        flex-grow: 1;
+        flex-basis: 0;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+
+        &-filled {
+            color: #FFFFFF;
+            background: #00BDF2;
+        }
+    }
+    
+    &__buttons {
+        display: flex;
+        gap: 16px;
+    }
+
+    &__code {
+        letter-spacing: 1px;
+        color: #939399;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    &__presence {
+        font-weight: 600;
+        margin-bottom: 23px;
+    }
+
+}
+
+.comments {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+
+
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 54px;
+        width: 100%;
+    }
+}
+
+.cell {
+    border-radius: 8px;
+    border: 1px solid #E4E4E4;
+    padding: 24px;
+    width: calc((100% - (2 * 23px)) / 3);
+
+    &__full-name {
+        margin-left: 12px;
+    }
+
+    &__date {
+        font-size: 12px;
+        color: #939399;
+        margin-left: 12px;
+    }
+
+    &__information {
+        display: flex;
+    }
+
+    &__name-date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+
+    }
+
+    &__text {
+        margin-bottom: 8px;
+    }
+
+    &__pros {
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+
+    &__cons {
+        font-size: 14px;
+    }
+
+    &:nth-of-type(1) {
+        .cell__rating {
+            .star:nth-of-type(5) {
+                background-image: url('/assets/images/shop/half-star.png');
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+
+.star {
+    width: 20px;
+    height: 20px;
+}
